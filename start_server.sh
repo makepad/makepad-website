@@ -11,4 +11,9 @@ fi
 
 cargo build --release
 sudo setcap 'cap_net_bind_service=+ep' target/release/makepad-web-server
+
+if [ "$#" -eq 0 ]; then
+    exec cargo run --release -- --port 80
+fi
+
 exec cargo run --release -- "$@"
