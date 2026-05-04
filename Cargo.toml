@@ -1,0 +1,11 @@
+[package]
+name = "makepad-website"
+version = "0.1.0"
+edition = "2021"
+default-run = "makepad-web-server"
+
+[[bin]]
+name = "makepad-web-server"
+path = "web_server.rs"
+
+[workspace]

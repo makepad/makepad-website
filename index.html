@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Makepad</title>
+        <meta name="description" content="Makepad 2.0 is a multiplatform Rust UI layer and AI development environment with Splash, our live readable UI DSL for AI-generateable interfaces.">
+        <meta name="keywords" content="Rust UIs, Makepad, Splash, AI UI Generation, OSS, UI-Framework, Performance, Cross Platform, Code, Workflows, Design-Editor, Development, Short Compile Times">
+        <meta name="author" content="Makepad">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#000000">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    </head>
+    <script>
+      function runScroll(target) {
+          elmnt = document.getElementById(target);
+          window.scrollTo({
+              top: elmnt.getBoundingClientRect().top,
+              left: 0,
+              behavior: 'smooth'
+          });
+      }
+
+      window.onload = function() {
+          Array.prototype.forEach.call(window.parent.document.querySelectorAll("link[rel=stylesheet]"), function(link) {
+              var newLink = document.createElement("link");
+              newLink.rel  = link.rel;
+              newLink.href = link.href;
+              document.head.appendChild(newLink);
+          });
+      };
+    </script>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a target="_blank" href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="" async defer></script>
+    
+            <div id="header" class="flex-row width-full">
+                <div id="hero-illustration-layer" class="flex-row width-full">
+                    <div id="header-content" class="flex-row width-main-std site-padding">
+                        <div id="menu" class="flex-row width-main-std">
+                            <div class="makepad-logo">
+                                <a href="index.html"><img src="img/logo_makepad.svg" alt="Makepad" width="175"></a>
+                            </div>
+                            <div class="flex-col nav">
+                                <ul class="flex-row">
+                                    <li>
+                                        <a target="_blank" href="#" class="cryptedmail"
+                                        data-name="info"
+                                        data-domain="makepad"
+                                        data-tld="nl"
+                                        onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+                                            <img title="Makepad email Contact" alt="Makepad email" src="img/icon_mail.svg" alt="Makepad" width="20" height="16">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://discord.gg/adJcZVjXrV">
+                                            <img title="Makepad Discord Server" alt="Makepad Discord Server" src="img/logo_discord.svg" alt="Makepad" width="20">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.x.com/makepad">
+                                            <img title="Makepad Twitter Account" alt="Makepad Twitter Account" src="img/logo_twitter.svg" alt="Makepad" width="20">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://github.com/makepad/makepad">
+                                            <img title="Makepad GitHub" alt="Makepad GitHub" src="img/logo_github.svg" alt="Makepad" width="20">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="hero" class="flex-row width-main-std">
+                            <div class="flex-col">
+                                <h1 style="margin: 0; padding: 0.;">
+                                    Makepad 2.0<br/>
+                                    AI Native<br/>
+                                    Rust UIs
+                                </h1>
+                                <H2>
+                                    A multiplatform Rust UI layer and AI development environment. Splash, our live readable UI DSL, streams generated interfaces into native Rust apps.
+
+                                </H2>
+                                <p style="margin-top: 20px;">
+                                <span
+                                    class="cta"
+                                    style="cursor: pointer; display: inline-flex; align-items: center; text-decoration: none;"
+                                    onclick="window.open('https://github.com/makepad/makepad', '_blank')">
+                                    <img class="left" src="img/triangle_white_half_left.svg" alt="" width="auto">
+                                    <span class="middle">Explore on GitHub!</span>
+                                    <img class="right" src="img/triangle_white_half_right.svg" alt="" width="auto">
+                                </span>
+                                </p>
+
+
+                                
+                                <a target="_blank" href="https://discord.gg/adJcZVjXrV" class="discord-cta">Join our<br />Discord Server!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="features" class="flex-row width-main-std site-padding">
+                <div class="flex-col">
+                    <h2>AI generation</h2>
+                    <p>Makepad is built around code that AI systems can generate, stream, inspect, and revise. Splash is our live readable UI DSL: a compact way to describe screens, widgets, layout, styling, and state so models can generate UI in small, reviewable steps.</p>
+                </div>
+                <div class="flex-col">
+                    <h2>Rust for AI</h2>
+                    <p>Rust gives AI-generated code a fast target with strong, structured warnings and errors. Those diagnostics help generated UI code converge on correct APIs, ownership, types, and layout.</p>
+                </div>
+                <div class="flex-col">
+                    <h2>Fast generated code</h2>
+                    <p>Generated UI code should still ship as fast native software. Makepad pairs AI-friendly authoring with Rust performance across desktop, mobile, and web targets.</p>
+                </div>
+            </div>
+
+            <a id="tutorial" target="_blank" href="https://github.com/makepad/makepad">
+              <img class="left" src="img/triangle_white_half_left.svg" height="30" width="auto">
+              <span>Get Started Now!</span>
+            </a>
+
+            <div class="flex-row width-main-std section-header site-padding" id="demos-hl">
+                <h2>Showcase Apps and<br /> Live Examples</h2>
+            </div>
+            <div id="demos" class="flex-row width-full">
+                <div class="flex-row width-full inner site-padding">
+                    <div class="flex-col demo demo-card demo-graphs">
+                        <a target="_blank" href="makepad-example-charts/index.html"><img alt="Graphs demo preview" title="Graphs demo" src="img/demo-graphs.png"></a>
+                        <div class="flex-row header">
+                            <h3>Graphs</h3>
+                            <ul class="flex-row">
+                                <li><a target="_blank" href="makepad-example-charts/index.html" class="link-icon">Demo</a></li>
+                                <li><a target="_blank" href="https://github.com/makepad/makepad/tree/master/examples/charts" class="github">GitHub</a></li>
+                            </ul>
+                            <p>
+                                A compact WebAssembly example showing native Makepad chart rendering in the browser.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-col demo demo-card">
+                        <a target="_blank" href="makepad-example-splash/index.html" class="demo-thumb"><span>Splash</span></a>
+                        <div class="flex-row header">
+                            <h3>Splash</h3>
+                            <ul class="flex-row">
+                                <li><a target="_blank" href="makepad-example-splash/index.html" class="link-icon">Demo</a></li>
+                                <li><a target="_blank" href="https://github.com/makepad/makepad/tree/master/examples/splash" class="github">GitHub</a></li>
+                            </ul>
+                            <p>
+                                A live Makepad UI showcase covering widgets, layout, text, vectors, and interaction.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-col demo demo-card">
+                        <a target="_blank" href="makepad-example-pdf/index.html" class="demo-thumb"><span>PDF</span></a>
+                        <div class="flex-row header">
+                            <h3>PDF</h3>
+                            <ul class="flex-row">
+                                <li><a target="_blank" href="makepad-example-pdf/index.html" class="link-icon">Demo</a></li>
+                                <li><a target="_blank" href="https://github.com/makepad/makepad/tree/master/examples/pdf" class="github">GitHub</a></li>
+                            </ul>
+                            <p>
+                                A WebAssembly PDF viewer example built with Makepad widgets and Rust parsing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project-direction" class="flex-row width-main-std site-padding">
+                <div class="flex-col">
+                    <h2>Project history</h2>
+                    <p>Makepad started in 2019 and is now transitioning into a wider open source project around Rust UI, AI-assisted development, and Splash, our live readable UI DSL for generated interfaces.</p>
+                    <p><a href="history.html" class="link-icon">Read the history</a></p>
+                </div>
+            </div>
+            
+            <div id="footer" class="flex-row width-full site-padding">
+                <div class="flex-row width-main-std site-padding inner">
+                    <div class="logo flex-col">
+                        <div class="makepad-logo flex-row">
+                            <a href="index.html">
+                              <img title="Makepad" alt="Makepad" src="img/logo_makepad.svg" alt="Makepad" width="175">
+                            </a>
+                        </div>
+                        <ul class="flex-row">
+                            <li>
+                                <a target="_blank" href="#" class="cryptedmail"
+                                data-name="info"
+                                data-domain="makepad"
+                                data-tld="nl"
+                                onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+                                    <img title="Makepad email Contact" alt="Makepad email" src="img/icon_mail.svg" alt="Makepad" width="20" height="16">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://discord.gg/adJcZVjXrV">
+                                    <img title="Makepad Discord Server" alt="Makepad Discord Server"src="img/logo_discord.svg" alt="Makepad" width="20">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.x.com/makepad">
+                                    <img title="Makepad twitter account" alt="Makepad twitter account" src="img/logo_twitter.svg" alt="Makepad" width="20">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://github.com/makepad/makepad">
+                                    <img title="Makepad GitHub" alt="Makepad GitHub" src="img/logo_github.svg" alt="Makepad" width="20">
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <ul class="menu flex-row">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="history.html">History</a></li>
+                          <li><a href="privacy.html">Privacy</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+    </body>
+  <script>
+    var nl_input = document.getElementById('sib-form-container');
+    var style_target = document.getElementById('sib-form-container');
+
+    function nlFocus() {
+        style_target.classList.add("nl-focus");
+    }
+
+    if (nl_input && style_target) {
+        nl_input.addEventListener("focus", nlFocus, true);
+    }
+
+    const form = document.getElementById('sib-form');
+    const cb = document.getElementById('OPT_IN');
+    const consent = document.getElementById('consent');
+
+    if (form && cb && consent) {
+        form.addEventListener('submit', (event) => {
+          if(cb.checked == false) {
+            consent.classList.add("cb-warning");
+            event.stopImmediatePropagation();
+            event.preventDefault();
+          } else if(consent.classList.contains("cb-warning")) {
+            consent.classList.remove("cb-warning");
+          }
+        });
+    }
+  </script>
+</html>
